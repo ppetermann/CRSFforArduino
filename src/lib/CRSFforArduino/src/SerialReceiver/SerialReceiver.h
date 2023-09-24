@@ -30,7 +30,7 @@
 #include "CRSF/CRSF.h"
 #include "Telemetry/Telemetry.h"
 #if defined(ARDUINO) && defined(PLATFORMIO)
-#include "Hardware/Hardware.h"
+#include "../Hardware/Hardware.h"
 #elif defined(ARDUINO) && !defined(PLATFORMIO)
 #include "lib/CRSFforArduino/src/Hardware/Hardware.h"
 #endif

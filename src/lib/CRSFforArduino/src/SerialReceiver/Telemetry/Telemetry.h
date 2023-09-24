@@ -29,10 +29,10 @@
 #include "Arduino.h"
 
 #if defined(ARDUINO) && defined(PLATFORMIO)
-#include "Hardware/DevBoards/DevBoards.h"
-#include "SerialReceiver/CRC/CRC.h"
-#include "SerialReceiver/CRSF/CRSFProtocol.h"
-#include "SerialReceiver/SerialBuffer/SerialBuffer.h"
+#include "../../Hardware/DevBoards/DevBoards.h"
+#include "../../SerialReceiver/CRC/CRC.h"
+#include "../../SerialReceiver/CRSF/CRSFProtocol.h"
+#include "../../SerialReceiver/SerialBuffer/SerialBuffer.h"
 #elif defined(ARDUINO) && !defined(PLATFORMIO)
 #include "lib/CRSFforArduino/src/Hardware/DevBoards/DevBoards.h"
 #include "lib/CRSFforArduino/src/SerialReceiver/CRC/CRC.h"

@@ -175,6 +175,8 @@ namespace hal
         device.type.devboard = DEVBOARD_IS_INCOMPATIBLE;
 #endif // ARDUINO_SAMD_ADAFRUIT
 
+#elif defined(ARDUINO_ARCH_ESP32)
+        device.type.devboard = DEVBOARD_ESP32;
 #else // Unsupported architecture
 #error "Unsupported architecture. Please check the compatibility table."
         device.type.devboard = DEVBOARD_IS_INCOMPATIBLE;

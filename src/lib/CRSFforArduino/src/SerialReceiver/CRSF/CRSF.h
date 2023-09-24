@@ -32,7 +32,7 @@
 #ifdef USE_DMA
 #include "Hardware/DevBoards/DevBoards.h"
 #endif
-#include "SerialReceiver/CRC/CRC.h"
+#include "../CRC/CRC.h"
 #elif defined(ARDUINO) && !defined(PLATFORMIO)
 #ifdef USE_DMA
 #include "lib/CRSFforArduino/src/Hardware/DevBoards/DevBoards.h"

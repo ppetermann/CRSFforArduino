@@ -79,6 +79,8 @@ namespace hal
             // Seeed Studio boards.
             DEVBOARD_SEEEDSTUDIO_XIAO_M0,
 
+            DEVBOARD_ESP32,
+            DEVBOARD_ESP32C3_DEVKITM,
             DEVBOARD_COUNT
         } ct_devboards_t;
 
@@ -119,6 +121,8 @@ namespace hal
             "Arduino MKRZERO",
             "Arduino Nano 33 IoT",
             "Arduino Zero",
-            "Seeed Studio Xiao SAMD21"};
+            "Seeed Studio Xiao SAMD21",
+            "ESP32",
+            "ESP32-C3-DevKitM",};
     };
 } // namespace hal

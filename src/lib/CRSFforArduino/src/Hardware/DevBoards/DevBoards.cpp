@@ -101,6 +101,22 @@ namespace hal
                 uart_port = nullptr;
                 break;
         }
+#elif defined(ARDUINO_ARCH_ESP32)
+        switch (port)
+        {
+            case 0:
+                uart_port = &Serial1;
+                break;
+
+            case 1: // TO-DO: Fix this.
+                uart_port = new HardwareSerial(2);
+                break;
+
+            default:
+                uart_port = nullptr;
+                break;
+        }
+
 #else
         uart_port = nullptr;
 #endif
@@ -109,10 +125,12 @@ namespace hal
     void DevBoards::clearUART()
     {
         // If UART port was defined beforehand, delete it.
+#if defined(ARDUINO_ARCH_SAMD)
         if (uart_port != nullptr)
         {
             uart_port->~Uart();
         }
+#endif
     }
 
     void DevBoards::begin(unsigned long baudrate, uint16_t config)

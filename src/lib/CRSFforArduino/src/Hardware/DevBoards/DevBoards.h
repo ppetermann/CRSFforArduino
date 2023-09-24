@@ -21,12 +21,14 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with CRSF for Arduino.  If not, see <https://www.gnu.org/licenses/>.
- * 
+ *
  */
 
 #pragma once
 
 #include "Arduino.h"
+#include <HardwareSerial.h>
+
 #ifdef USE_DMA
 #if defined(ARDUINO_ARCH_SAMD)
 #include "Adafruit_ZeroDMA.h"
@@ -35,7 +37,7 @@
 
 namespace hal
 {
-    class DevBoards : private HardwareSerial
+    class DevBoards : Stream
     {
       public:
         DevBoards();
